@@ -11,15 +11,15 @@ The key implementation files include:
 
 ## Environment configuration
 ### Step 1: Clone the repository:
-
+```
 git clone https://github.com/JunhaoWang-bme/FG-TTT.git
 cd FG-TTT
-
+```
 
 ### Step 2: Install dependencies:
-
+```
 pip install -r requirements.txt
-
+```
 
 ## Data Preparation
 The data preprocessing pipeline follows the same approach as the standard nnUNet framework.
@@ -48,27 +48,27 @@ Before executing the project, you need to load pre-trained weights (train a segm
 
 ### Step 1: Convert Task Dataset  
 Convert the dataset to nnUNet-compatible format:  
-
+```
 nnUNet_convert_decathlon_task -i INPUT_FOLDER/TaskXXX_UMD
-
+```
 
 ### Step 2: Plan and Preprocess  
 Generate training plans and preprocess the dataset:  
-
+```
 nnUNet_plan_and_preprocess -t XX --verify_dataset_integrity
-
+```
 
 ### Step 3: Train with Pre-trained Weights  
 Train the model using the custom trainer and pre-trained weights:  
-
+```
 nnUNet_train 3d_fullres UMDConsistencyTrainer XXX 4 --npz -pretrained_weights /path/to/model_best_checkpoint.model
-
+```
 
 ### Step 4: Inference/Prediction  
 Run inference on new data:  
-
+```
 nnUNet_predict -i INPUT -o OUTPUT -t XXX -m 3d_fullres -tr UMDConsistencyTrainer -f 4
-
+```
 
 ## About nnInteractive
 The items and weights can be downloaded from the nnInteractive model website: https://github.com/MIC-DKFZ/nnInteractive
