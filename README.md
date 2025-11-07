@@ -29,6 +29,7 @@ All data files must adhere to the following naming convention:UMD_(id)_(plane).n
 (plane): Imaging plane (e.g., sagittal, transverse, coronal) corresponding to the data.
 This format ensures compatibility with the custom dataloader (umd_dataloader.py) and downstream processing steps.
 
+```
 nnUNet_raw_data/TaskXXX_UMD/
 ├── imagesTr/
 │   ├── UMD_001_sag.nii.gz
@@ -37,7 +38,7 @@ nnUNet_raw_data/TaskXXX_UMD/
 │   └── ...
 ├── labelsTr/               # placeholder folder (The labels file is just a placeholder and does not participate in supervised training, pseudo-labels can be generated with pre-trained models.)
 └── dataset.json            # standard nnUNet format
-
+```
 
 ## Running the Project
 
