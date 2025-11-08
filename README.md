@@ -4,10 +4,10 @@ A Test-Time Training project built on nnUNet v1.7.1, designed for medical image 
 
 ## Core Scripts
 The key implementation files include:
-- `FG_TTT_nnunet/training/network_training/umd_trainer.py`  
-- `FG_TTT_nnunet/training/network_training/refiner.py`  
-- `FG_TTT_nnunet/training/dataloading/umd_dataloader.py`  
-- `FG_TTT_nnunet/training/loss_functions/multiview_consistency_loss.py`  
+- `nnunet/training/network_training/umd_trainer.py`  
+- `nnunet/training/network_training/refiner.py`  
+- `nnunet/training/dataloading/umd_dataloader.py`  
+- `nnunet/training/loss_functions/multiview_consistency_loss.py`  
 
 ## Environment configuration
 ### Step 1: Clone the repository:
@@ -19,6 +19,18 @@ cd FG-TTT
 ### Step 2: Install dependencies:
 ```
 pip install -r requirements.txt
+```
+
+### Step 3: Path settings:
+```
+# GPU
+export CUDA_VISIBLE_DEVICES=0
+# Set the original data path
+export nnUNet_raw_data_base=/path/to/nnUNet/DATASET/nnUNet_raw"
+# Set the preprocessed data path
+export nnUNet_preprocessed="/path/to/nnUNet/DATASET/nnUNet_preprocessed"
+# Set the results path
+export RESULTS_FOLDER="/path/to/nnUNet/DATASET/nnUNet_trained_models"
 ```
 
 ## Data Preparation
