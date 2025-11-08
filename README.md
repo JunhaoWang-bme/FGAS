@@ -4,20 +4,21 @@ A Test-Time Training project built on nnUNet v1.7.1, designed for medical image 
 
 ## Core Scripts
 The key implementation files include:
-- `nnunet/training/network_training/umd_trainer.py`  
-- `nnunet/training/network_training/refiner.py`  
-- `nnunet/training/dataloading/umd_dataloader.py`  
-- `nnunet/training/loss_functions/multiview_consistency_loss.py`  
+- `FG_TTT/nnunet/training/network_training/umd_trainer.py`  
+- `FG_TTT/nnunet/training/network_training/refiner.py`  
+- `FG_TTT/nnunet/training/dataloading/umd_dataloader.py`  
+- `FG_TTT/nnunet/training/loss_functions/multiview_consistency_loss.py`  
+- `FG_TTT/nnunet/training/network_training/nnInteractive`  
 
 ## Environment configuration
 ### Step 1: Clone the repository:
 ```
 git clone https://github.com/JunhaoWang-bme/FG-TTT.git
-cd FG-TTT
 ```
 
 ### Step 2: Install dependencies:
 ```
+cd FG_TTT
 pip install -r requirements.txt
 ```
 
