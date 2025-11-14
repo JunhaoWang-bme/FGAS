@@ -1,14 +1,14 @@
-## FG-TTT Project
-A Test-Time Training project built on nnUNet v1.7.1, designed for medical image segmentation with multi-view consistency constraints.
+## FGAS Project
+A project built on nnUNet v1.7.1, designed for medical image segmentation with multi-view consistency constraints.
 
 
 ## Core Scripts
 The key implementation files include:
-- `FG_TTT/nnunet/training/network_training/umd_trainer.py`  
-- `FG_TTT/nnunet/training/network_training/refiner.py`  
-- `FG_TTT/nnunet/training/dataloading/umd_dataloader.py`  
-- `FG_TTT/nnunet/training/loss_functions/multiview_consistency_loss.py`  
-- `FG_TTT/nnunet/training/network_training/nnInteractive`  
+- `FGAS/nnunet/training/network_training/umd_trainer.py`  
+- `FGAS/nnunet/training/network_training/refiner.py`  
+- `FGAS/nnunet/training/dataloading/umd_dataloader.py`  
+- `FGAS/nnunet/training/loss_functions/multiview_consistency_loss.py`  
+- `FGAS/nnunet/training/network_training/nnInteractive`  
 
 ## Environment configuration
 ### Step 1: Clone the repository:
