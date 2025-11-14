@@ -13,12 +13,12 @@ The key implementation files include:
 ## Environment configuration
 ### Step 1: Clone the repository:
 ```
-git clone https://github.com/JunhaoWang-bme/FG-TTT.git
+git clone https://github.com/JunhaoWang-bme/FGAS.git
 ```
 
 ### Step 2: Install dependencies:
 ```
-cd FG_TTT
+cd FGAS
 pip install -r requirements.txt
 ```
 
