@@ -37,6 +37,7 @@ export RESULTS_FOLDER="/path/to/nnUNet/DATASET/nnUNet_trained_models"
 ## Data Preparation
 - `FGAS/preprocessing/resampling.py`
 - `FGAS/preprocessing/unify_mri_mask.py`
+
 The data preprocessing pipeline follows the same approach as the standard nnUNet framework.
 Key Note on Data Naming Format
 All data files must adhere to the following naming convention:UMD_(id)_(plane).nii.gz
@@ -87,6 +88,7 @@ nnUNet_predict -i INPUT -o OUTPUT -t XXX -m 3d_fullres -tr UMDConsistencyTrainer
 
 ## About nnInteractive
 The items and weights can be downloaded from the nnInteractive model website: https://github.com/MIC-DKFZ/nnInteractive
+
 
 ## About Comparative Methods (Continuously updated)
 - `Comparative_Methods/Register`   # Data Processing Methodology: Employed for data registration and mask transformation, it serves as a foundation for subsequent segmentation training.
