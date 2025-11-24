@@ -1,0 +1,68 @@
+# Data
+data:
+  data_dir: "/home/login/Data/data"
+  label_dir: "/home/login/Data/data_pseudo-labels"
+  image_suffix: "_0000.nii.gz"
+  label_suffix: ".nii.gz"
+  target_size: [96, 96, 96]           # [D, H, W]
+  train_split: 0.8
+  use_pseudo_labels: true
+
+# Model
+model:
+  n_channels: 1
+  n_classes: 5
+  bilinear: false
+  dropout_rate: 0.1
+  base_channels: 32
+  use_contrastive: true
+  feature_dim: 256
+
+training:
+  batch_size: 2
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  accumulation_steps: 2  # batch size = batch_size * accumulation_steps
+  scheduler:
+    type: "CosineAnnealingLR"
+    T_max: 100  # epoch
+    eta_min: 0.00001
+  contrastive_weight: 0.2
+  segmentation_weight: 0.8
+
+loss:
+  type: "combined"  # combined, dice, focal, ce, contrastive
+  dice_weight: 0.5
+  ce_weight: 0.5
+  focal_alpha: 1.0
+  focal_gamma: 2.0
+  class_weights: [1.0, 2.0, 2.0, 2.0, 2.0]
+
+contrastive_loss:
+  type: "multi_view"  # multi_view, hard_negative, multi_scale
+  temperature: 0.1
+  lambda_intra: 2.0
+  lambda_inter: 1.0
+  top_k: 10
+  scale_weights: [1.0, 0.5, 0.25]
+
+augmentation:
+  enabled: true
+  rotation_range: 15
+  scale_range: [0.9, 1.1]
+  flip_probability: 0.5
+  noise_std: 0.01
+  brightness_range: [0.9, 1.1]
+
+paths:
+  checkpoint_dir: "checkpoints"
+  log_dir: "logs"
+  prediction_dir: "predictions"
+  best_model_name: "best_model.pth"
+
+misc:
+  seed: 42
+  num_workers: 0
+  pin_memory: false
+  device: cuda:3  # auto, cpu, cuda
