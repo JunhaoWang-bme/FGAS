@@ -86,6 +86,11 @@ Run inference on new data:
 nnUNet_predict -i INPUT -o OUTPUT -t XXX -m 3d_fullres -tr UMDConsistencyTrainer -f 4
 ```
 
+### Model Checkpoints
+We provide the pre-trained model checkpoints for easy reproduction and further development. You can access the full model weights and related files via the Hugging Face Hub:
+
+📦 Checkpoint Link: [YOLOwjh/FGAS on Hugging Face](https://huggingface.co/YOLOwjh/FGAS/tree/main)
+
 ## About nnInteractive
 The items and weights can be downloaded from the nnInteractive model website: https://github.com/MIC-DKFZ/nnInteractive
 
